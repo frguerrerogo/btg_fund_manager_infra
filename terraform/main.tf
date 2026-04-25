@@ -14,8 +14,7 @@ module "users" {
 }
 
 module "funds" {
-  source = "./modules/funds"
-
+  source     = "./modules/funds"
   table_name = var.funds_table_name
   tags       = local.common_tags
 }
