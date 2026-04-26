@@ -1,14 +1,9 @@
-variable "table_name" {
-  description = "Nombre de la tabla DynamoDB"
+variable "env" {
   type        = string
-  default     = "funds"
+  description = "Deployment environment"
 }
 
 variable "tags" {
-  description = "Tags comunes del proyecto"
   type        = map(string)
-  default     = {
-    Project     = "my-app"
-    Environment = "dev"
-  }
+  description = "Common tags for all resources"
 }

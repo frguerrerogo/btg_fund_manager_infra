@@ -1,23 +1,15 @@
-variable "environment" {
-  description = "Environment name"
+variable "env" {
   type        = string
-  default     = "local"
+  description = "Deployment environment"
+
+  validation {
+    condition     = contains(["dev", "staging", "prod"], var.env)
+    error_message = "env must be dev, staging, or prod."
+  }
 }
 
-variable "users_table_name" {
-  description = "Nombre de la tabla de usuarios"
-  type        = string
-  default     = "users"
-}
-
-variable "funds_table_name" {
-  description = "Nombre de la tabla de fondos"
-  type        = string
-  default     = "funds"
-}
-
-variable "transactions_table_name" {
-  description = "Nombre de la tabla de transacciones"
-  type        = string
-  default     = "transactions"
+variable "common_tags" {
+  type        = map(string)
+  description = "Common tags for all resources"
+  default     = {}
 }

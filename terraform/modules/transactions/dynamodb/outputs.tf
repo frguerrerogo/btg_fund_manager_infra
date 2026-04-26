@@ -5,7 +5,7 @@ output "table_arn" {
 
 output "table_name" {
   description = "Nombre de la tabla transactions"
-  value       = aws_dynamodb_table.transactions.name
+  value       = aws_dynamodb_table.transactions.id
 }
 
 output "table_id" {
@@ -13,7 +13,3 @@ output "table_id" {
   value       = aws_dynamodb_table.transactions.id
 }
 
-output "gsi_name" {
-  description = "Nombre del GSI (Global Secondary Index)"
-  value       = "fund_id-created_at-index"
-}

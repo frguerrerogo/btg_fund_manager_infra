@@ -12,8 +12,3 @@ output "table_id" {
   description = "ID de la tabla transactions"
   value       = module.dynamodb.table_id
 }
-
-output "gsi_name" {
-  description = "Nombre del GSI (Global Secondary Index)"
-  value       = "fund_id-created_at-index"
-}

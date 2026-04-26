@@ -1,10 +1,9 @@
-variable "table_name" {
-  description = "Nombre de la tabla de transacciones"
+variable "env" {
   type        = string
+  description = "Deployment environment"
 }
 
 variable "tags" {
-  description = "Tags comunes para todos los recursos"
   type        = map(string)
-  default     = {}
+  description = "Common tags for all resources"
 }

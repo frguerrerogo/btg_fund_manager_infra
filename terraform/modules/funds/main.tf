@@ -2,6 +2,6 @@
 module "dynamodb" {
   source = "./dynamodb"
 
-  table_name = var.table_name
-  tags       = var.tags
+  env  = var.env
+  tags = var.tags
 }
