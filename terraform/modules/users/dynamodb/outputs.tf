@@ -5,7 +5,5 @@ output "table_arn" {
 
 output "table_name" {
   description = "Nombre de la tabla users"
-  value       = aws_dynamodb_table.users.id
+  value       = aws_dynamodb_table.users.name
 }
-
-

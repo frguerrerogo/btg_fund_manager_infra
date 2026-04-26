@@ -27,8 +27,3 @@ output "transactions_table_arn" {
   description = "ARN de la tabla transactions"
   value       = module.transactions.table_arn
 }
-
-output "transactions_gsi_name" {
-  description = "Nombre del GSI para buscar transacciones por fondo"
-  value       = module.transactions.gsi_name
-}
