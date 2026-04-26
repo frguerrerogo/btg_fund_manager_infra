@@ -1,7 +1,17 @@
-Set-Alias tf terraform -- powershell
+# Terraform Commands
 
-tf init
-tf fmt -- Formatear codigo de tf
-tf plan -- para ver que se va crear
-tf aply -- va a crear
-tf destroy -- eliminar toda la infrastructura que tu conoces
+## Alias
+
+```powershell
+Set-Alias tf terraform
+```
+
+## Comandos principales
+
+| Comando             | Descripción                      |
+| ------------------- | -------------------------------- |
+| `tf init`           | Inicializar Terraform            |
+| `tf fmt -recursive` | Formatear código                 |
+| `tf plan`           | Ver cambios antes de aplicar     |
+| `tf apply`          | Crear/actualizar infraestructura |
+| `tf destroy`        | Eliminar toda la infraestructura |
