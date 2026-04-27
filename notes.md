@@ -15,3 +15,5 @@ Set-Alias tf terraform
 | `tf plan`           | Ver cambios antes de aplicar     |
 | `tf apply`          | Crear/actualizar infraestructura |
 | `tf destroy`        | Eliminar toda la infraestructura |
+
+tf state list ver que esta creado
