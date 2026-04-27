@@ -1,0 +1,6 @@
+{
+  "id": { "S": "4" },
+  "name": { "S": "FDO-ACCIONES" },
+  "minimum_amount": { "N": "250000" },
+  "category": { "S": "FIC" }
+}

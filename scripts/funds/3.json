@@ -1,0 +1,6 @@
+{
+  "id": { "S": "3" },
+  "name": { "S": "DEUDAPRIVADA" },
+  "minimum_amount": { "N": "50000" },
+  "category": { "S": "FIC" }
+}

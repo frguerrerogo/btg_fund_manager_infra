@@ -1,0 +1,6 @@
+{
+  "id": { "S": "1" },
+  "name": { "S": "FPV_BTG_PACTUAL_RECAUDADORA" },
+  "minimum_amount": { "N": "75000" },
+  "category": { "S": "FPV" }
+}

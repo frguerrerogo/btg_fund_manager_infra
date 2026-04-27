@@ -1,0 +1,6 @@
+{
+  "id": { "S": "2" },
+  "name": { "S": "FPV_BTG_PACTUAL_ECOPETROL" },
+  "minimum_amount": { "N": "125000" },
+  "category": { "S": "FPV" }
+}

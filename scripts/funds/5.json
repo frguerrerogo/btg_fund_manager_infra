@@ -1,0 +1,6 @@
+{
+  "id": { "S": "5" },
+  "name": { "S": "FPV_BTG_PACTUAL_DINAMICA" },
+  "minimum_amount": { "N": "100000" },
+  "category": { "S": "FPV" }
+}
