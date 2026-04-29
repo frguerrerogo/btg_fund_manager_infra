@@ -22,7 +22,7 @@ Verifica que esté corriendo:
 docker ps
 ```
 
-Debería mostrar container `localstack_main` corriendo.
+Debería mostrar containers `BTG-AWS-localstack` y `dynamodb-admin` corriendo.
 
 ## 3. Deploy Infraestructura
 
@@ -57,11 +57,7 @@ Debería mostrar `"Count": 5`
 
 ## 5. Ver Datos (DynamoDB Admin)
 
-UI visual para navegar los datos:
-
-```bash
-docker run -p 8001:8001 -e DYNAMO_ENDPOINT=http://localhost:4566 aaronshaf/dynamodb-admin
-```
+UI visual para navegar los datos (se inicia automáticamente con `docker-compose up -d`):
 
 Abre en navegador: http://localhost:8001
 
@@ -77,9 +73,9 @@ Abre en navegador: http://localhost:8001
 
 ## Troubleshooting
 
-| Problema          | Solución                                                    |
-| ----------------- | ----------------------------------------------------------- |
-| Port 4566 en uso  | `docker stop localstack_main && docker rm localstack_main`  |
-| Tablas no existen | `terraform apply`                                           |
-| 0 items en tabla  | `cd scripts && .\seed.bat`                                  |
-| AWS CLI error     | `aws configure` (credenciales dummy: key=test, secret=test) |
+| Problema          | Solución                                                         |
+| ----------------- | ---------------------------------------------------------------- |
+| Port 4566 en uso  | `docker stop BTG-AWS-localstack && docker rm BTG-AWS-localstack` |
+| Tablas no existen | `terraform apply`                                                |
+| 0 items en tabla  | `cd scripts && .\seed.bat`                                       |
+| AWS CLI error     | `aws configure` (credenciales dummy: key=test, secret=test)      |

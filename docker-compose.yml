@@ -2,14 +2,24 @@ version: "3.8"
 
 services:
   localstack:
-    container_name: localstack
-    image: localstack/localstack:latest
+    container_name: BTG-localstack
+    image: localstack/localstack:4.8
     ports:
       - "4566:4566"
     environment:
       - SERVICES=dynamodb,s3,lambda
-      - DEBUG=1
+      - DEBUG=0
       - DATA_DIR=/tmp/localstack/data
     volumes:
       - "./localstack:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
+
+  dynamodb-admin:
+    container_name: BTG-dynamodb-admin
+    image: aaronshaf/dynamodb-admin:latest
+    ports:
+      - "8001:8001"
+    environment:
+      - DYNAMO_ENDPOINT=http://BTG-localstack:4566
+    depends_on:
+      - localstack
