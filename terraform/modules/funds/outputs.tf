@@ -8,3 +8,10 @@ output "table_name" {
   value       = module.dynamodb.table_name
 }
 
+output "get_funds_name" {
+  value = module.lambda.get_funds_name
+}
+
+output "get_fund_by_id_name" {
+  value = module.lambda.get_fund_by_id_name
+}

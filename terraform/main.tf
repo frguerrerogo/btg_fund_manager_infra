@@ -9,18 +9,16 @@ locals {
   )
 }
 
-module "users" {
-  source = "./modules/users"
 
-  env  = var.env
-  tags = local.common_tags
-}
 
 module "funds" {
   source = "./modules/funds"
 
-  env  = var.env
-  tags = local.common_tags
+  env               = var.env
+  tags              = local.common_tags
+  functions_path    = var.functions_path
+  lambda_role_arn   = aws_iam_role.lambda_role.arn
+  dynamodb_endpoint = var.dynamodb_endpoint
 }
 
 module "transactions" {
@@ -28,4 +26,11 @@ module "transactions" {
 
   env  = var.env
   tags = local.common_tags
+}
+module "users" {
+  source = "./modules/users"
+
+  env  = var.env
+  tags = local.common_tags
+
 }

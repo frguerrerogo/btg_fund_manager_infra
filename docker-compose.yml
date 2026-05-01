@@ -7,7 +7,7 @@ services:
     ports:
       - "4566:4566"
     environment:
-      - SERVICES=dynamodb,s3,lambda
+      - SERVICES=dynamodb,iam,s3,lambda
       - DEBUG=0
       - DATA_DIR=/tmp/localstack/data
     volumes:
